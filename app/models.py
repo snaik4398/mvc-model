@@ -129,14 +129,14 @@ def signup():
         if name1=="" or name1==" " or name1=="  ":
             print("hello nullll")
             return render_template('signup.html',error='enter correct name in the name field')
-        
+        l.clear()
         gen1 = request.form['gender']
         phno = request.form['pno']
         adhar = request.form['adhar']
         dob = request.form['birthday']
         email1 = request.form['email']
         pin = request.form['pincode']
-
+        
         l.append(f'{pat_id} ')
         l.append(f'{name1} ')
         l.append(f'{email1}')
@@ -180,28 +180,6 @@ def signup():
 
 
 
-
-# @app.route('/success/<string:sco>')
-# def success(sco):
-#     res = ""
-#     print(sco)
-#     score=int(sco)
-#     print(score)
-
-
-    # if score >= 4:
-    #     res = "NEED TO CHECHK UP"
-    # else:
-    #     res = "NO NEED TO CHECHK UP"
-
-    # cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-    # k=str(score)#convert store to string as it is varchar in the msql databse
-    # cursor.execute('UPDATE pat_info SET score =% s,result =% s WHERE id =% s', (k, res, gpid,))
-    # mysql.connection.commit()
-
-    # return render_template('result.html', result=res, sc=score, id=gpid)
-
-
 @app.route('/fail/<string:s>')
 def fail(s):
     return s+"please enter the valid input as written in the webpage"
@@ -236,9 +214,7 @@ def submit():
         except:
             
             return render_template('table.html',error='enter the valid input',id=gpid, nm=pname, gen=pgender, pin=ppin, dob=pdob, email=pemail)
-            # pemail, pdob, pgender, ppin, pname, gpid
-            # id=gpid, nm=name1, gen=gen1, pin=pin, dob=dob, email=email1,msg=msg
-     
+   
         if (p1 > 3 or p1 < 0  ):
             return render_template('table.html',error='enter the valid input',id=gpid, nm=pname, gen=pgender, pin=ppin, dob=pdob, email=pemail)
           
@@ -270,9 +246,6 @@ def submit():
     return render_template('result.html', result=res, sc=score, id=gpid)
 
 
-    # sendind the total score to success function
-    # return redirect(url_for('success', sco=tc))
-        
 
     
 
@@ -280,7 +253,7 @@ def submit():
 def search():
     if request.method == 'POST':
         drag_input=(request.form['primary_key']).lower()
-        idata=(request.form['inp']).lower()
+        idata=(request.form['inp']).lower().strip()
         print(drag_input)
         print(idata)
     

@@ -16,7 +16,6 @@
     <a href="/"><img src="{{ url_for('static', filename='images/k2.png')}}"  alt="img" style="max-width: 300px; max-height: 300px"></img></a>
 
   </div>
->
 </head>
 
 <body>
@@ -33,7 +32,7 @@
         <option><a class="dropdown-item" value="p" href="">PATIENT ID</a></option>
       </select>
       <input name="inp" type="text" class="form-control" aria-label="Sizing example input"
-      aria-describedby="inputGroup-sizing-default" pattern="[A-za-z0-9\.]{1,100}">
+      aria-describedby="inputGroup-sizing-default" pattern="[A-za-z0-9\s\.]{1,100}" title=" character must be digit for patient id and aplhabet for firstname and last name and it must be between 1 to 100 ">
       <button class="btn btn-outline-success" type="submit" pattern="[^'\x22]+" title="Invalid input">Search</button>
       <button type="reset" value="reset" class="btn btn-secondary">Clear</button>
     </div>
