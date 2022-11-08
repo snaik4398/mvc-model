@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %} HOME PAGE{% endblock %}
+{% block body %}
+
+
+
+<!-- <link href="{{ url_for('static', filename='css/style_satwika.css')}}" rel="stylesheet"> -->
+
+
+<div class="wrapper">
+  <div style="background-image:url(https://t4.ftcdn.net/jpg/01/74/93/85/240_F_174938589_PrFF3ZDYS9D7MdtFR12BWNBo41S3ugQA.jpg)"></div>
+    <div style="background-image:url(https://t4.ftcdn.net/jpg/02/10/42/73/240_F_210427323_DgmvOO5zLAxwpHpFwWFwaGWAgNroFygJ.jpg
+    )"></div>
+    <div style="background-image:url(https://t3.ftcdn.net/jpg/02/25/99/18/240_F_225991855_D2D5M3JGsLjCoTXfGHLWp1RiubPikwMo.jpg)"></div>
+    <div style="background-image:url(https://t3.ftcdn.net/jpg/00/90/63/34/240_F_90633462_ypWqcqAJFtZ3rbzk86L1GsWz1d8QSIzH.jpg)"></div>
+    <div style="background-image:url(https://t3.ftcdn.net/jpg/01/33/90/92/240_F_133909221_o23Ocrx2268PoNWpMf7vb4gJmLAN2Tlg.jpg)"></div>
+</div>
+<!-- 
+<div class="menu">
+  <div class="logo">
+
+    <a href="#"><img src="kar logo 2.png" alt="img" style="max-width: 300px; max-height: 300px"></img></a> -->
+
+  <!-- </div>
+  <ul>
+    <li><a href="#"><i class="fa fa-fw fa-home"></i>Home</a></li>
+    <li><a href="https://www.karkinos.in/">About</a></li>
+    <li><a href="Link.html">Link</a></li>
+    <li><a href="#"><i class="fa fa-fw fa-envelope"></i>Contact</a></li>
+     <li><a href="feedback.html">Feedback</a></li> 
+  </ul>
+</div> -->
+</nav>
+<!-- <div class="img"></div> -->
+<div class="center">
+<div class="title"     style="color:#6c1370 ;">NCD Risk Assessment </div>
+<div class="sub_title" style="color:#6c1370 ;">Check Your Health Status</div>
+
+<div class="">
+  <!-- <button><a href="Register.html">Register</a></button> -->
+  <!-- <button><a href="location.href='/searchpage'">Search</a></button> -->
+  <!-- <button>Search</button> -->
+  <!-- <button onclick="location.href='/searchpage'" type="button" class="btn btn-danger">seach</button> -->
+  <button onclick="location.href='/signuppage'" type="button" class="btn btn-secondary btn-lg" style=" background-color: #6c1475" >signup</button>
+  <button onclick="location.href='/searchpage'" type="button" class="btn btn-secondary btn-lg" style=" background-color: #6c1475" >search</button>
+</div>
+</div>
+
+<!-- 
+
+<div class="bd-example" align="middle y-8">
+ <form action="" method='post'>
+
+   <button onclick="location.href='/signuppage'" type="button" class="btn btn-danger">signup</button>
+      <button onclick="location.href='/searchpage'" type="button" class="btn btn-danger">seach</button>
+  </form>
+        
+    </div> -->
+
+
+    {% endblock body %}
