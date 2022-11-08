@@ -258,9 +258,9 @@ def submit():
         print(score)
     print(f"the score after the loop is {score}")
     if score >= 4:
-        res = "NEED TO CHECHK UP"
+        res = "NEED TO CHECK UP"
     else:
-        res = "NO NEED TO CHECHK UP"
+        res = "NO NEED TO CHEC K UP"
 
     cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
     k=str(score)#convert store to string as it is varchar in the msql databse
