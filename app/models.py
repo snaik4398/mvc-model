@@ -215,8 +215,8 @@ def submit():
     # declaring global Variable to use within the submit function
     score = 0
     # mail=email
-    c = 0
-    a1=-1
+    
+    res=" "
 
     if request.method == 'POST':
         try:
@@ -226,6 +226,13 @@ def submit():
             p4 = int(request.form.get('4pp'))
             p5 = int(request.form.get('5pp'))
             p6 = int(request.form.get('6pp'))
+            print(f"the value of 1pp{p1}")
+            print(f"the value of 2pp{p2}")
+            print(f"the value of 3pp{p3}")
+            print(f"middle one")
+            print(f"the value of 4pp{p4}")
+            print(f"the value of 5pp{p5}")
+            print(f"the value of 6pp{p6}")
         except:
             
             return render_template('table.html',error='enter the valid input',id=gpid, nm=pname, gen=pgender, pin=ppin, dob=pdob, email=pemail)
@@ -236,17 +243,20 @@ def submit():
             return render_template('table.html',error='enter the valid input',id=gpid, nm=pname, gen=pgender, pin=ppin, dob=pdob, email=pemail)
           
         if (p2 > 2 or p2 < 0):
-             return render_template('table.html',error='enter the valid input',id=gpid, nm=pname, gen=pgender, pin=ppin, dob=pdob, email=pemail)
+            return render_template('table.html',error='enter the valid input',id=gpid, nm=pname, gen=pgender, pin=ppin, dob=pdob, email=pemail)
         if (p3 > 1 or p3 < 0):
-             return render_template('table.html',error='enter the valid input',id=gpid, nm=pname, gen=pgender, pin=ppin, dob=pdob, email=pemail)
-        if (p4 > 3 or p4 < 0):
-             return render_template('table.html',error='enter the valid input',id=gpid, nm=pname, gen=pgender, pin=ppin, dob=pdob, email=pemail)
-        if (p5 > 2 or p5 < 0):
-             return render_template('table.html',error='enter the valid input',id=gpid, nm=pname, gen=pgender, pin=ppin, dob=pdob, email=pemail)
-        if (p6 > 2 or p6 < 0):
-             return render_template('table.html',error='enter the valid input',id=gpid, nm=pname, gen=pgender, pin=ppin, dob=pdob, email=pemail)
 
-        score = (a1+p2+p3+p4+p5+p6)
+            return render_template('table.html',error='enter the valid input',id=gpid, nm=pname, gen=pgender, pin=ppin, dob=pdob, email=pemail)
+        if (p4 > 3 or p4 < 0):
+            return render_template('table.html',error='enter the valid input',id=gpid, nm=pname, gen=pgender, pin=ppin, dob=pdob, email=pemail)
+        if (p5 > 2 or p5 < 0):
+            return render_template('table.html',error='enter the valid input',id=gpid, nm=pname, gen=pgender, pin=ppin, dob=pdob, email=pemail)
+        if (p6 > 2 or p6 < 0):
+            return render_template('table.html',error='enter the valid input',id=gpid, nm=pname, gen=pgender, pin=ppin, dob=pdob, email=pemail)
+
+        score = (p1+p2+p3+p4+p5+p6)
+        print(score)
+    print(f"the score after the loop is {score}")
     if score >= 4:
         res = "NEED TO CHECHK UP"
     else:
