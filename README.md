@@ -1,4 +1,4 @@
-# mvc-model
+# mvc-model-python
 
 app folder contain all the codes
 
